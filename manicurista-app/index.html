@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NailBook - Gestión de Citas para Manicurista</title>
+    <link rel="stylesheet" href="frontend/css/main.css">
+    <link rel="stylesheet" href="frontend/css/calendar.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>NailBook 💅</h1>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" data-page="dashboard" class="active"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="#" data-page="clients"><span class="icon">👩</span> Clientes</a></li>
+            <li><a href="#" data-page="services"><span class="icon">💆‍♀️</span> Servicios</a></li>
+            <li><a href="#" data-page="appointments"><span class="icon">📅</span> Citas</a></li>
+            <li><a href="#" data-page="loyalty"><span class="icon">⭐</span> Fidelización</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Page -->
+        <section id="page-dashboard" class="page active">
+            <h2>Dashboard</h2>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">👩</span>
+                    <span class="stat-value" id="total-clients">0</span>
+                    <span class="stat-label">Clientes</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📅</span>
+                    <span class="stat-value" id="today-appointments">0</span>
+                    <span class="stat-label">Citas Hoy</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">💰</span>
+                    <span class="stat-value" id="today-revenue">$0</span>
+                    <span class="stat-label">Ingresos Hoy</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-value" id="loyalty-qualified">0</span>
+                    <span class="stat-label">Con Descuento</span>
+                </div>
+            </div>
+            <h3>Citas de Hoy</h3>
+            <div id="today-appointments-list"></div>
+        </section>
+
+        <!-- Clients Page -->
+        <section id="page-clients" class="page">
+            <h2>Clientes</h2>
+            <button class="btn-primary" onclick="showClientForm()">+ Nueva Clienta</button>
+            <div id="client-form-container"></div>
+            <div id="clients-list"></div>
+        </section>
+
+        <!-- Services Page -->
+        <section id="page-services" class="page">
+            <h2>Servicios y Precios</h2>
+            <button class="btn-primary" onclick="showServiceForm()">+ Nuevo Servicio</button>
+            <div id="service-form-container"></div>
+            <div id="services-list"></div>
+        </section>
+
+        <!-- Appointments Page -->
+        <section id="page-appointments" class="page">
+            <h2>Citas</h2>
+            <button class="btn-primary" onclick="showAppointmentForm()">+ Nueva Cita</button>
+            <div id="appointment-form-container"></div>
+            <div id="calendar-view"></div>
+        </section>
+
+        <!-- Loyalty Page -->
+        <section id="page-loyalty" class="page">
+            <h2>Fidelización y Descuentos</h2>
+            <button class="btn-primary" onclick="showLoyaltyForm()">+ Nueva Regla</button>
+            <div id="loyalty-form-container"></div>
+            <div id="loyalty-rules-list"></div>
+        </section>
+    </main>
+
+    <!-- Modal for appointment details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="frontend/js/app.js"></script>
+</body>
+</html>

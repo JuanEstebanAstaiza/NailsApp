@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Card styles - Mangomint style */
+.card {
+  @apply bg-white rounded-lg shadow-sm-card border border-gray-100;
+}
+
+.card-hover {
+  @apply transition-shadow duration-200 hover:shadow-md-card;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary-600 text-white px-4 py-2 rounded-md font-medium text-sm 
+         hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-md font-medium text-sm 
+         hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-1;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white px-4 py-2 rounded-md font-medium text-sm 
+         hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1;
+}
+
+/* Input styles */
+.input {
+  @apply border border-gray-300 rounded-md px-3 py-2 text-sm 
+         focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+/* Badge styles */
+.badge-success {
+  @apply bg-green-100 text-green-800 px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800 px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+/* Navigation styles */
+.nav-item {
+  @apply flex items-center gap-3 px-4 py-2.5 rounded-md text-sm font-medium 
+         transition-colors duration-150 cursor-pointer;
+}
+
+.nav-item-active {
+  @apply bg-primary-50 text-primary-700;
+}
+
+.nav-item-inactive {
+  @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+}
+
+/* Calendar styles */
+.calendar-day {
+  @apply w-full aspect-square flex items-center justify-center rounded-md text-sm font-medium 
+         transition-colors duration-150 cursor-pointer;
+}
+
+.calendar-day-hover {
+  @apply hover:bg-primary-50 hover:text-primary-700;
+}
+
+.calendar-day-active {
+  @apply bg-primary-600 text-white;
+}
+
+.calendar-day-today {
+  @apply ring-1 ring-inset ring-primary-400;
+}
+
+/* Loyalty progress bar */
+.progress-bar-bg {
+  @apply w-full h-2.5 rounded-full bg-gray-200;
+}
+
+.progress-bar-fill {
+  @apply h-2.5 rounded-full transition-all duration-300 ease-out;
+}
